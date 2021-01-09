@@ -31,7 +31,7 @@ export default function autoMove() {
 		window.ws.send = function(obj) { 
 			const object = JSON.parse(obj);
 			if (object.e !== 'input' || (object.e === 'input' && (Number(object.input.keys) !== ${keys[text].inverse}))) {
-				if (Number(object.input.keys) === ${keys[text].value} && object.input.value === false) {
+				if (object.e === 'input' && Number(object.input.keys) === ${keys[text].value} && object.input.value === false) {
 					return;
 				}
 				send.call(this, obj);
