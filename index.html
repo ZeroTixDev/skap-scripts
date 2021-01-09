@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+		<div class="container">
+			<h1 id="top">Skap Scripts</h1>
+			<button id="direction">Auto move in one direction</button>
+			<button id="anti-afk">Anti-AFK (stay in game while afk)</button>
+		</div>
+		<div class="direction hidden">
+			<h1 id="top">Auto move in one direction</h1>
+			<div class="button-container">
+				<button id="up">UP</button>
+				<button id="down">DOWN</button>
+				<button id="left">LEFT</button>
+				<button id="right">RIGHT</button>
+			</div>
+			<h1 id="paste"class="hidden">Paste this code into the console when you join a game!</h1>
+			<textarea class="text hidden" type="text" readonly></textarea>
+		</div>
+		<div class="anti-afk hidden">
+			<h1 id="top">Anti-AFK</h1>
+			<h1 id="paste"class="hidden">Paste this code into the console when you join a game!</h1>
+			<textarea class="text hidden" type="text" readonly></textarea>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
