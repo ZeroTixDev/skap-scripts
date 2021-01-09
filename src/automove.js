@@ -1,7 +1,7 @@
 export default function autoMove() {
 	const keys = {
-		'UP': { value: 0, inverse: 2 },
-		'DOWN': { value : 2, inverse: 0 },
+		'UP': { value: 0, inverse: Infinity },
+		'DOWN': { value : 2, inverse: Infinity },
 		'LEFT': { value: 1, inverse: 3 },
 		'RIGHT': { value: 3, inverse: 1 },
 	}
