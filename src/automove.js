@@ -1,23 +1,4 @@
-function init() {
-	const container = document.querySelector('.container');
-	for (const i in container.children) {
-		const button = container.children[i];
-		if (typeof button !== 'object' || button.localName === 'h1') continue;
-		button.addEventListener('click', (event) => {
-			event.preventDefault();
-			container.classList.add('hidden');
-			if (button.id === 'direction') {
-				document.querySelector('.direction').classList.remove('hidden');
-				autoMove();
-			} else if (button.id === 'anti-afk') {
-				document.querySelector('.anti-afk').classList.remove('hidden');
-			}
-		})
-	}
-}
-init();
-function antiAfk()
-function autoMove() {
+export default function autoMove() {
 	const keys = {
 		'UP': { value: 0, inverse: 2 },
 		'DOWN': { value : 2, inverse: 0 },

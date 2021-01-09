@@ -8,6 +8,7 @@ body {
 	background:rgb(80, 80, 201);
 	font-family: 'Noto Sans', sans-serif;
 	font-size:16px;
+	text-align:center;
 }
 .direction, .container, .anti-afk{
 	display: flex;
@@ -20,6 +21,28 @@ body {
 	color:rgb(2, 0, 48);
 	font-size: 2rem;
 }
+.help {
+	display: flex;
+	justify-content:center;
+	align-items:center;
+}
+.help a {
+	width: 150px;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	background-color:rgb(13, 184, 184);
+	color:rgb(0, 67, 82);
+	font-size:1.2rem;
+	margin:10px;
+	text-align: center;
+	text-decoration: none;
+	padding:5px;
+}
+
+.help a:hover {
+	background-color:rgb(4, 117, 117);
+}
 .direction h1, .anti-afk h1{
 	font-size:1.2rem;
 }
@@ -27,7 +50,7 @@ body {
 	margin:5px;
 	padding:10px;
 }
-button {
+button, a{
 	margin:5px;
 	padding:15px;
 	cursor: pointer;

@@ -11,6 +11,10 @@
 			<h1 id="top">Skap Scripts</h1>
 			<button id="direction">Auto move in one direction</button>
 			<button id="anti-afk">Anti-AFK (stay in game while afk)</button>
+			<div class="help">
+				<a href="https://discord.gg/bCbKYk6Rh7" target="blank" id="discord"><span>Discord</span></a>
+				<a href="https://github.com/ZeroTixDev/skap-scripts/" target="blank" id="contribute"><span>Contribute</span></a>
+			</div>
 		</div>
 		<div class="direction hidden">
 			<h1 id="top">Auto move in one direction</h1>
@@ -25,10 +29,10 @@
 		</div>
 		<div class="anti-afk hidden">
 			<h1 id="top">Anti-AFK</h1>
-			<h1 id="paste"class="hidden">Paste this code into the console when you join a game!</h1>
-			<textarea class="text hidden" type="text" readonly></textarea>
+			<h1 id="paste">Paste this code into the console when you join a game! (type clear() to stop it)</h1>
+			<textarea class="text" type="text" readonly></textarea>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
-    <script src="script.js"></script>
+    <script src="src/index.js" type="module"></script>
   </body>
 </html>
