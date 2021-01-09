@@ -30,13 +30,16 @@ export default function autoMove() {
 		ws.send(JSON.stringify({ e: 'input', input: { keys: ${keys[text].value}, value: true}}));
 		window.ws.send = function(obj) { 
 			const object = JSON.parse(obj);
-			if (object.e !== 'input' || (object.e === 'input' && Number(object.input.keys) !== ${keys[text].inverse})) {
+			if (object.e !== 'input' || (object.e === 'input' && (Number(object.input.keys) !== ${keys[text].inverse}))) {
+				if (Number(object.input.keys) === ${keys[text].value} && object.input.value === false) {
+					return;
+				}
 				send.call(this, obj);
 			}
 		}
 		ws.addEventListener('message', (obj) => {
 			const data = JSON.parse(obj.data);
-				if (data.e === 'initMap') {
+				if (data.e === 'initMap' || data.e === 'message') {
 						ws.send(JSON.stringify({ e: 'input', input: { keys: ${keys[text].value}, value: true}}));
 				}
 		});
