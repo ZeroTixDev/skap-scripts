@@ -5,7 +5,6 @@ export default function autoMove() {
 		'LEFT': { value: 1, inverse: 3 },
 		'RIGHT': { value: 3, inverse: 1 },
 	}
-	const startString = `const send = window.ws.send;`;
 	function setupEventListeners() {
 		const buttonContainer = document.querySelector('.direction .button-container');
 		const input = document.querySelector('.direction .text');
@@ -26,7 +25,8 @@ export default function autoMove() {
 	}
 	function makeString(text) {
 		if (keys[text] === undefined) { throw new Error('hacker!') };
-		return  startString +  `
+		return `
+		const send = window.ws.send;
 		ws.send(JSON.stringify({ e: 'input', input: { keys: ${keys[text].value}, value: true}}));
 		window.ws.send = function(obj) { 
 			const object = JSON.parse(obj);
